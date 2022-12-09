@@ -1,0 +1,36 @@
+.contact {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.contact__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.contact__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+    fill: currentColor;
+    transition: color var(--time) var(--cubic);
+
+    &:hover, &:focus{
+        color: var(--acсent-color);
+    }
+}
+
+.contact__icon {
+    margin-right: 10px;
+}
