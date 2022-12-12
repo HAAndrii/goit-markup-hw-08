@@ -1,0 +1,28 @@
+.address__post {
+    margin-bottom: 9px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--logo-second-color);
+}
+
+.addres__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__link {
+    @extend %link;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--address-color);
+    font-style: normal;
+
+    transition: color var(--time) var(--cubic);
+    &:hover,
+    &:focus {
+        color: var(--acсent-color);
+    }
+}
+

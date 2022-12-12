@@ -1,0 +1,27 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+
+    .container {
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @include mq (tablet){
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+
+        @include mq (desktop) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
