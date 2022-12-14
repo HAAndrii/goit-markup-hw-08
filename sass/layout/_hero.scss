@@ -9,7 +9,6 @@
     background-size: cover;
     background-position: center;
 
-    padding: 118px 0;
     margin: 0 auto;
 
 
@@ -20,15 +19,39 @@
             url(../images/hero/img_mob@2x.jpg);
     }
 
-    @media screen and (min-width: 768px) {
-        // min-height: 459px;
-    }
+    @include mq (tablet) {
+        background-image: linear-gradient(to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url(../images/hero/img_tab.jpg);
+           
 
-    @media screen and (min-width: 1200px) {
-        min-height: 600px;
-        padding: 200px 0;
+        @include mqr ('2x') {
+            background-image: linear-gradient(to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+               url(../images/hero/img_tab@2x.jpg);
+        }
     }
+    
+    @include mq(desktop) {
+        background-image: linear-gradient(to top,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/img_desk.jpg);
+        
+        
+        @include mqr ('2x') {
+            background-image: linear-gradient(to top,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/img_desk@2x.jpg);
+        }
+    }    
 
+    .container{
+    padding: 118px 60px;
+    }
 }
 
 .hero__title {
@@ -36,6 +59,7 @@
     // font-weight: 900;
     // font-size: 44px;
     // line-height: 1.36;
+    margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;

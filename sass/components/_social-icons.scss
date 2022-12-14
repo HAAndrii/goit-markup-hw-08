@@ -24,17 +24,6 @@
     }
 }
 
-.footer-social__social-icons{
-    justify-content: flex-start;
-}
-
-.footer-social__link{
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--bg-main);
-
-    transition: background-color var(--time) var(--cubic);
-}
-
 .social-icons__item:not(:last-child) {
     margin-right: 10px;
 }

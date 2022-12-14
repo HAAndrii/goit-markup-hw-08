@@ -30,13 +30,18 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
 
     transition: transform var(--time) var(--cubic);
 
     .backdrop.is-hidden & {
         transform: scale(0.1);
+    }
+
+    @include mq(desktop){
+        width: 528px;
+        height: 581px;
     }
 }
 
@@ -194,11 +199,16 @@
 .modal__checkbox-label {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.03em;
 
     color: var(--second-color);
+
+    @include mq(desktop){
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .modal__checkbox-link {

@@ -177,17 +177,26 @@
         </div>
       </section>
 
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
               <img
+                srcset="
+                  ./images/team/img1_270.jpg 270w,
+                  ./images/team/img1_354.jpg 354w,
+                  ./images/team/img1_450.jpg 450w,
+                  ./images/team/img1_540.jpg 540w,
+                  ./images/team/img1_708.jpg 708w,
+                  ./images/team/img1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
                 class="team-list__img"
-                src="./images/team1.jpg"
+                src="./images/team/img1_450.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <h3 class="team-list__employee">Ігор Дем'яненко</h3>
               <p class="team-list__position">Product Designer</p>
@@ -225,11 +234,20 @@
             </li>
             <li class="team-list__item">
               <img
+                srcset="
+                  ./images/team/img2_270.jpg 270w,
+                  ./images/team/img2_354.jpg 354w,
+                  ./images/team/img2_450.jpg 450w,
+                  ./images/team/img2_540.jpg 540w,
+                  ./images/team/img2_708.jpg 708w,
+                  ./images/team/img2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
                 class="team-list__img"
-                src="./images/team2.jpg"
+                src="./images/team/img2_450.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <h3 class="team-list__employee">Ольга Рєпіна</h3>
               <p class="team-list__position">Frontend Developer</p>
@@ -266,11 +284,20 @@
             </li>
             <li class="team-list__item">
               <img
+                srcset="
+                  ./images/team/img3_270.jpg 270w,
+                  ./images/team/img3_354.jpg 354w,
+                  ./images/team/img3_450.jpg 450w,
+                  ./images/team/img3_540.jpg 540w,
+                  ./images/team/img3_708.jpg 708w,
+                  ./images/team/img3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
                 class="team-list__img"
-                src="./images/team3.jpg"
+                src="./images/team/img3_450.jpg"
                 alt="Микола Тарасов"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <h3 class="team-list__employee">Микола Тарасов</h3>
               <p class="team-list__position">Marketing</p>
@@ -307,11 +334,20 @@
             </li>
             <li class="team-list__item">
               <img
+                srcset="
+                  ./images/team/img4_270.jpg 270w,
+                  ./images/team/img4_354.jpg 354w,
+                  ./images/team/img4_450.jpg 450w,
+                  ./images/team/img4_540.jpg 540w,
+                  ./images/team/img4_708.jpg 708w,
+                  ./images/team/img4_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
                 class="team-list__img"
-                src="./images/team4.jpg"
+                src="./images/team/img4_450.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <h3 class="team-list__employee">Михайло Єрмаков</h3>
               <p class="team-list__position">UI Designer</p>
@@ -348,7 +384,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <section class="clients">
         <div class="container">
@@ -400,7 +436,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-company">
           <a class="logo footer__logo" href=""
@@ -480,9 +516,9 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="18" height="18">
@@ -561,7 +597,7 @@
 
         <button type="submit" class="modal__submit-btn">Відправити</button>
       </div>
-    </div> -->
+    </div>
 
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-close-btn js-close-menu" type="button">
@@ -571,9 +607,7 @@
       </button>
       <ul class="menu-phone">
         <li class="menu-phone__item">
-          <a class="menu-phone__link menu__link--active" href="./index.html"
-            >Студія</a
-          >
+          <a class="menu-phone__link" href="./index.html">Студія</a>
         </li>
         <li class="menu-phone__item">
           <a class="menu-phone__link" href="./portfolio.html">Портфоліо</a>
@@ -585,26 +619,34 @@
 
       <ul class="contact-phone">
         <li class="contact-phone__item">
-          <a class="contact-phone__link" href="mailto:info@devstudio.com">
-            info@devstudio.com</a
+          <a class="contact-phone__link" href="tel:+380961111111">
+            <span class="contact-phone__link--accent"
+              >+38 096 111 11 11</span
+            ></a
           >
         </li>
         <li class="contact-phone__item">
-          <a class="contact-phone__link" href="tel:+380961111111">
-            +38 096 111 11 11</a
+          <a class="contact-phone__link" href="mailto:info@devstudio.com">
+            info@devstudio.com</a
           >
         </li>
       </ul>
 
       <ul class="social-phone">
         <li class="social-phone__item">
-          <a href="" class="social-phone__link">Instagram </a>
+          <a href="" class="social-phone__link social-phone__link--after"
+            >Instagram
+          </a>
         </li>
         <li class="social-phone__item">
-          <a href="" class="social-phone__link"> Twitter </a>
+          <a href="" class="social-phone__link social-phone__link--after">
+            Twitter
+          </a>
         </li>
         <li class="social-phone__item">
-          <a href="" class="social-phone__link"> Facebook </a>
+          <a href="" class="social-phone__link social-phone__link--after">
+            Facebook
+          </a>
         </li>
         <li class="social-phone__item">
           <a href="" class="social-phone__link"> LinkedIn </a>

@@ -1,24 +1,44 @@
-.address__post {
-    margin-bottom: 9px;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--logo-second-color);
+.address{
+    margin-bottom: 60px;
 }
 
-.addres__item:not(:last-child) {
-    margin-bottom: 9px;
+.address__post {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 12px;
+
+    color: #FFFFFF;
+
+    @include mq(desktop){
+        margin-bottom: 9px;
+    }
+}
+
+.addres__item{
+    text-align: center;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    @include mq(desktop){
+        margin-bottom: 9px;
+    }
+
 }
 
 .address__link {
     @extend %link;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     color: var(--address-color);
     font-style: normal;
-
+    text-align: center;
+    
     transition: color var(--time) var(--cubic);
     &:hover,
     &:focus {

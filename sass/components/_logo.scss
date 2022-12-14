@@ -30,9 +30,15 @@
 }
 
 .footer__logo{
-    display: inline-block;
-    margin-bottom: 20px;
+    display: block;
+    margin-bottom: 28px;
+    text-align: center;
     &--color {
     color: var(--logo-second-color);
     }
+
+    @include mq(tablet){
+        margin-bottom: 20px;
+    }
+
 }
