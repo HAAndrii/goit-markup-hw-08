@@ -127,9 +127,10 @@
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
+    fill: var(--first-color);
     transition: fill var(--time) var(--cubic);
 
-    .modal-input:focus+& {
+    .modal__input:focus+& {
         fill: var(--acсent-color);
     }
 }

@@ -1152,10 +1152,11 @@ img {
   left: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  fill: var(--first-color);
   -webkit-transition: fill var(--time) var(--cubic);
   transition: fill var(--time) var(--cubic);
 }
-.modal-input:focus + .modal__input-icon {
+.modal__input:focus + .modal__input-icon {
   fill: var(--acсent-color);
 }
 
