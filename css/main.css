@@ -71,7 +71,7 @@ img {
   color: var(--logo-second-color);
 }
 
-.what-list__item, .features-list, .portfolio__product-list, .clients-list, .team-list, .social-icons, .contact, .menu, .social-phone, .contact-phone, .menu-phone {
+.what-list__item, .features-list, .portfolio__filter-list, .portfolio__product-list, .clients-list, .team-list, .social-icons, .contact, .menu, .social-phone, .contact-phone, .menu-phone {
   list-style: none;
 }
 
@@ -522,18 +522,25 @@ img {
   fill: currentColor;
 }
 
-.portfolio__product-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: 1199.98px) {
+  .portfolio__product-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
-.portfolio__product-item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+.portfolio__product-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1199.98px) {
+  .portfolio__product-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio__product-link {
@@ -599,6 +606,67 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--second-color);
+}
+
+.portfolio__filter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1199.98px) {
+  .portfolio__filter-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio__filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio__filter-item:nth-child(-n+3) {
+  margin-bottom: 15px;
+}
+
+.portfolio__filter-button {
+  padding: 6px 22px;
+  background: var(--bg-second);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-color);
+  border-color: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color var(--time) var(--cubic), color var(--time) var(--cubic), -webkit-box-shadow var(--time) var(--cubic);
+  transition: background-color var(--time) var(--cubic), color var(--time) var(--cubic), -webkit-box-shadow var(--time) var(--cubic);
+  transition: background-color var(--time) var(--cubic), color var(--time) var(--cubic), box-shadow var(--time) var(--cubic);
+  transition: background-color var(--time) var(--cubic), color var(--time) var(--cubic), box-shadow var(--time) var(--cubic), -webkit-box-shadow var(--time) var(--cubic);
+}
+.portfolio__filter-button:hover, .portfolio__filter-button:focus {
+  background-color: var(--acсent-color);
+  color: var(--logo-second-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio__filter-button--active {
+  background-color: var(--acсent-color);
+  color: var(--logo-second-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio__filter-button--padding {
+  padding: 6px 25px;
 }
 
 .address {
@@ -827,8 +895,6 @@ img {
 /* footer */
 .footer {
   background-color: var(--bg-hero);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .footer-social {
   margin-bottom: 60px;
@@ -936,12 +1002,7 @@ img {
   margin-left: 10px;
 }
 
-/* PORTFOLIO */
-.portfolio {
-  padding: 94px 0;
-}
-
-/* MODAL */
+/* PORTFOLIO */ /* MODAL */
 .is-hidden {
   visibility: hidden;
   opacity: 0;

@@ -1,12 +1,23 @@
 .portfolio__product-list {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+
+    @include mq(desktop){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .portfolio__product-item {
-    flex-basis: calc((100% - 60px) / 3);
+    
+
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    @include mq(desktop){
+        flex-basis: calc((100% - 60px) / 3);
+    }
 }
 
 .portfolio__product-link {
