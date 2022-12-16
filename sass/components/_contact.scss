@@ -1,15 +1,36 @@
 .contact {
     display: none;
     @extend %list;
-    // display: flex;
-    // align-items: center;
-    // margin-left: auto;
-}
-.contact__item {
-    margin-right: 50px;
 
+    @include mq(tablet) {
+        display: block;
+        margin-left: auto;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+
+        align-items: center;
+        margin-left: auto;
+        }
+    }
+    // display: flex;
+
+.contact__item {
+    
     &:last-child {
         margin-right: 0;
+    }
+
+    @include mq(only-tablet) {
+        &:nth-child(1) {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mq(desktop) {
+        margin-right: 50px;
+        margin-bottom: 0;
     }
 }
 
@@ -30,6 +51,8 @@
     &:hover, &:focus{
         color: var(--acсent-color);
     }
+
+
 }
 
 .contact__icon {

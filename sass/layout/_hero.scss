@@ -50,15 +50,15 @@
     }    
 
     .container{
-    padding: 118px 60px;
+        padding: 118px 60px;
+
+        @include mq(desktop) {
+            padding: 200px ;
+        }
     }
 }
 
 .hero__title {
-    // margin: 0 60px 30px;
-    // font-weight: 900;
-    // font-size: 44px;
-    // line-height: 1.36;
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.06em;
@@ -66,14 +66,20 @@
     color: var(--logo-second-color);
 
     @media screen and (min-width: 768px) {
-            // min-height: 459px;
+        width: 360px;
+        margin: 0 auto 30px;
+
+        font-weight: 900;
+        font-size: 26px;
+        line-height: calc(42 / 26);
+            
         }
 
     @media screen and (min-width: 1200px) {
-        margin: 0 250px 30px;
+        width: 725px;
+        font-size: 44px;
+        line-height: calc(60 / 44);
     }
-
-
 }
 
 .hero__button {

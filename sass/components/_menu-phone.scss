@@ -13,6 +13,12 @@
     &:focus{
         color: var(--acсent-color);
     }
+
+    display: none;
+    @include mq(only-phone) {
+        display: flex;
+    }
+        
 }
 
 .menu-open-btn__icon{

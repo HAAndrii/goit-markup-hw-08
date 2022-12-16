@@ -1,7 +1,7 @@
 .portfolio__product-list {
     @extend %list;
 
-    @include mq(desktop){
+    @include mq(tablet){
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -9,10 +9,12 @@
 }
 
 .portfolio__product-item {
-    
+    // &:not(:last-child){
+    //     margin-bottom: 30px;
+    // }
 
-    &:not(:last-child){
-        margin-bottom: 30px;
+    @include mq(tablet) {
+        flex-basis: calc((100% - 30px) / 2);
     }
 
     @include mq(desktop){
@@ -70,6 +72,11 @@
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+
+    @include mq(tablet){
+        height: 146px;
+    }
+    
 }
 
 .portfolio__product-name {

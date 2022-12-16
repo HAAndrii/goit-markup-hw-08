@@ -1,6 +1,6 @@
 .what {
-    @include mq (only-phone){
-    display: none;
+    @include mq (only-tablet){
+        display: none;
     }
 }
 

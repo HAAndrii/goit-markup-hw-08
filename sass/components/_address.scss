@@ -1,5 +1,12 @@
 .address{
     margin-bottom: 60px;
+    @include mq(desktop){
+        margin-bottom: 0;
+    }
+}
+
+.address__list{
+    @extend %list;
 }
 
 .address__post {
@@ -25,7 +32,12 @@
         margin-bottom: 12px;
     }
     @include mq(desktop){
-        margin-bottom: 9px;
+        // margin-bottom: 9px;
+        text-align: start;
+
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
     }
 
 }

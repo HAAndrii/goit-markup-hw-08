@@ -1,7 +1,11 @@
 .menu {
     display: none;
     @extend %list;
-    // display: flex;
+
+    @include mq(tablet){
+        display: flex;
+    }
+    
 }
 
  .menu__item {
@@ -41,7 +45,11 @@
         border-radius: 4px;
         background-color: var(--acсent-color);
 
-        bottom: -31px;
+        bottom: -39px;
         left: 0;
+
+        @include mq(desktop){
+            bottom: -31px;
+        }
     }
 }

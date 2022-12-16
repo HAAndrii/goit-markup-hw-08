@@ -1,7 +1,5 @@
 .page-header {
     border-bottom: 1px solid #ececec;
-    // padding-top: 24px;
-    // padding-bottom: 24px;
 
     .container {
         display: flex;
@@ -11,6 +9,8 @@
         @include mq (tablet){
             padding-top: 26px;
             padding-bottom: 26px;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         @include mq (desktop) {
